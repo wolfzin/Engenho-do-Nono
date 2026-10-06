@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Engenho do Nono · Comida da nona, cachaça desde 1918 · Gaspar/SC</title>
+<meta name="description" content="Restaurante campestre e engenho de cachaça desde 1918 no Alto Gasparinho, Gaspar/SC. Almoço de sábado, almoço da nona no domingo e café colonial. Reservas pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#EFE6D2;--papel2:#E2D5B8;--cana:#2E4A2C;--madeira:#3B2A1E;--cobre:#A4512B;--agua:#3F6B6E;--zap:#1F7A4D}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',system-ui,sans-serif;color:var(--madeira);background:var(--papel);line-height:1.6;
+ background-image:radial-gradient(rgba(59,42,30,.06) 1px,transparent 1px);background-size:5px 5px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.demo{background:var(--madeira);color:var(--papel);text-align:center;font-size:.8rem;padding:.45rem 1rem;letter-spacing:.02em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.25rem}
+.slab{font-family:'Alfa Slab One',serif;font-weight:400;letter-spacing:.01em}
+.caslon{font-family:'Libre Caslon Text',serif}
+.rule{border:0;border-top:3px double var(--madeira);margin:0}
+/* cabeçalho rótulo */
+header.top{border-bottom:3px double var(--madeira);background:var(--papel)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.9rem;padding-bottom:.9rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.seal{width:54px;height:54px;border:2px solid var(--madeira);border-radius:50%;display:grid;place-items:center;outline:1px solid var(--madeira);outline-offset:3px;font-family:'Alfa Slab One';font-size:.72rem;line-height:1;text-align:center;color:var(--cobre)}
+.brand b{font-family:'Alfa Slab One';font-size:1.45rem;display:block;line-height:1;font-weight:400}
+.brand small{font-family:'Libre Caslon Text';font-style:italic;font-size:.85rem}
+nav.links{display:flex;gap:1.3rem;font-weight:600;font-size:.9rem}
+nav.links a{text-decoration:none;border-bottom:2px solid transparent}
+nav.links a:hover{border-color:var(--cobre)}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;text-decoration:none;padding:.85rem 1.3rem;border:2px solid var(--madeira);background:var(--zap);color:#fff;box-shadow:4px 4px 0 var(--madeira);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--madeira)}
+.btn.alt{background:var(--papel);color:var(--madeira)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+/* hero */
+.hero{padding:2.6rem 0 3rem}
+.hero .grid{display:grid;grid-template-columns:1.25fr .95fr;gap:2.4rem;align-items:stretch}
+.kicker{font-family:'Libre Caslon Text';font-style:italic;color:var(--cobre);font-size:1.1rem}
+.hero h1{font-family:'Alfa Slab One';font-weight:400;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.02;color:var(--cana);margin:.3rem 0 1rem}
+.hero h1 em{font-style:normal;color:var(--cobre)}
+.hero p.lead{font-size:1.1rem;max-width:36ch;margin-bottom:1.4rem}
+.photo-frame{border:2px solid var(--madeira);padding:8px;background:var(--papel2);box-shadow:6px 6px 0 rgba(59,42,30,.25);position:relative}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.hero .left .photo-frame{margin-top:1.6rem;height:300px}
+.stamp{position:absolute;right:-14px;top:-18px;background:var(--cobre);color:var(--papel);font-family:'Alfa Slab One';padding:.55rem .8rem;transform:rotate(4deg);border:2px solid var(--madeira);font-size:.95rem}
+/* calendario */
+.cal{background:#FBF6EA;border:2px solid var(--madeira);outline:1px solid var(--madeira);outline-offset:-8px;padding:1.6rem 1.5rem;display:flex;flex-direction:column}
+.cal h2{font-family:'Alfa Slab One';font-weight:400;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cobre);text-align:center}
+.cal .next{text-align:center;margin:1rem 0 .4rem;border-top:1px solid var(--madeira);border-bottom:1px solid var(--madeira);padding:1rem 0}
+.cal .next .wd{font-family:'Libre Caslon Text';font-style:italic;font-size:1.05rem}
+.cal .next .day{font-family:'Alfa Slab One';font-size:5.4rem;line-height:1;color:var(--cana)}
+.cal .next .mon{font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem}
+.cal ul{list-style:none;margin:.8rem 0 1rem}
+.cal li{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(59,42,30,.4);padding:.45rem 0;font-weight:600}
+.cal li span:last-child{font-family:'Libre Caslon Text';font-style:italic;font-weight:400}
+.cal .note{font-size:.82rem;background:var(--papel2);padding:.7rem .8rem;border-left:4px solid var(--cobre);margin-bottom:1rem}
+.cal .btn{justify-content:center;margin-top:auto}
+.steps{counter-reset:s;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:0 0 1rem}.steps li{counter-increment:s;font-size:.8rem;font-weight:600;text-align:center;border:1px solid var(--madeira);padding:.5rem .3rem;background:var(--papel)}.steps li::before{content:counter(s);display:block;font-family:"Alfa Slab One";font-size:1.3rem;color:var(--cobre);line-height:1.1}
+/* dias */
+section{padding:4rem 0}
+.sec-title{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.sec-title h2{font-family:'Alfa Slab One';font-weight:400;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--cana);line-height:1.1;white-space:nowrap}
+.sec-title::after{content:"";flex:1;border-top:3px double var(--madeira)}
+.sec-title .num{font-family:'Libre Caslon Text';font-style:italic;color:var(--cobre);font-size:1.2rem}
+.days{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--madeira)}
+.day-col{padding:1.4rem;border-right:1px solid var(--madeira);background:#F6EFDF}
+.day-col:last-child{border-right:0}
+.day-col img{height:190px;width:100%;object-fit:cover;border:1px solid var(--madeira);margin-bottom:1rem}
+.day-col .tag{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--agua)}
+.day-col h3{font-family:'Alfa Slab One';font-weight:400;font-size:1.45rem;margin:.2rem 0 .3rem}
+.day-col .hora{font-family:'Libre Caslon Text';font-style:italic;color:var(--cobre);margin-bottom:.6rem}
+.day-col p{font-size:.95rem}
+.info-strip{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:1.2rem;font-size:.9rem;font-weight:600}
+.info-strip span::before{content:"✦ ";color:var(--cobre)}
+/* historia */
+.hist{background:var(--cana);color:var(--papel);background-image:none}
+.hist .sec-title h2{color:var(--papel)}
+.hist .sec-title::after{border-color:var(--papel)}
+.hist-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem;align-items:start}
+.hist .photo-frame{background:#24391f;border-color:var(--papel)}
+.timeline{list-style:none;position:relative;padding-left:1.4rem;border-left:2px solid rgba(239,230,210,.5)}
+.timeline li{margin-bottom:1.5rem;position:relative}
+.timeline li::before{content:"";position:absolute;left:-1.95rem;top:.5rem;width:14px;height:14px;background:var(--cobre);border:2px solid var(--papel);border-radius:50%}
+.timeline .yr{font-family:'Alfa Slab One';font-size:2rem;line-height:1;color:#E9B48F}
+.timeline p{max-width:52ch}
+blockquote.gilmar{margin-top:1.4rem;font-family:'Libre Caslon Text';font-style:italic;font-size:1.3rem;line-height:1.45;border-top:1px solid rgba(239,230,210,.4);padding-top:1.2rem}
+blockquote.gilmar cite{display:block;font-family:'Libre Franklin';font-style:normal;font-size:.85rem;margin-top:.5rem;opacity:.85}
+/* cachaçaria */
+.cach{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.4rem;align-items:stretch}
+.cach .photo-frame{height:360px}
+.label-card{border:2px solid var(--madeira);background:#FBF6EA;padding:1.6rem;text-align:center;display:flex;flex-direction:column;justify-content:center;outline:1px solid var(--madeira);outline-offset:-8px}
+.label-card .small{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--cobre)}
+.label-card h3{font-family:'Alfa Slab One';font-weight:400;font-size:1.9rem;color:var(--cana);margin:.4rem 0}
+.label-card ul{list-style:none;margin:.8rem 0;font-family:'Libre Caslon Text';font-size:1.1rem}
+.label-card li{padding:.25rem 0;border-bottom:1px dotted var(--madeira)}
+.label-card p{font-size:.88rem}
+/* la fora */
+.mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:.8rem}
+.mosaic figure{border:2px solid var(--madeira);overflow:hidden;position:relative;background:var(--papel2)}
+.mosaic figure img{width:100%;height:100%;object-fit:cover}
+.mosaic figure:first-child{grid-row:span 2}
+.mosaic figcaption{position:absolute;left:0;bottom:0;background:var(--papel);font-size:.78rem;font-weight:700;padding:.25rem .6rem;border-top:1px solid var(--madeira);border-right:1px solid var(--madeira)}
+.fora-txt{margin-top:1.4rem;max-width:70ch;font-size:1.02rem}
+/* avaliações */
+.rev{background:var(--papel2)}
+.score{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.score b{font-family:'Alfa Slab One';font-size:3.6rem;color:var(--cobre);line-height:1;font-weight:400}
+.score span{font-weight:600}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.quotes figure{background:#FBF6EA;border:1px solid var(--madeira);padding:1.4rem;position:relative}
+.quotes figure::before{content:"“";font-family:'Alfa Slab One';font-size:3.2rem;color:var(--cobre);position:absolute;top:-.6rem;left:.8rem;line-height:1}
+.quotes blockquote{font-family:'Libre Caslon Text';font-size:1.02rem;margin-top:.8rem}
+.quotes figcaption{margin-top:.8rem;font-size:.82rem;font-weight:700}
+/* como chegar */
+.chegar{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
+.warn{background:#FBF6EA;border:2px dashed var(--cobre);padding:1.2rem 1.3rem;margin:1rem 0}
+.warn strong{color:var(--cobre)}
+.contacts{list-style:none;margin:1rem 0 1.4rem}
+.contacts li{padding:.55rem 0;border-bottom:1px solid rgba(59,42,30,.25)}
+.contacts b{display:inline-block;min-width:105px}
+.btns{display:flex;flex-wrap:wrap;gap:1rem}
+footer{background:var(--madeira);color:var(--papel);padding:2rem 0;font-size:.85rem;background-image:none}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fab{position:fixed;right:16px;bottom:16px;z-index:20;width:58px;height:58px;border-radius:50%;background:var(--zap);display:grid;place-items:center;border:2px solid var(--madeira);box-shadow:3px 3px 0 var(--madeira)}
+.fab svg{width:28px;height:28px;fill:#fff}
+@media (max-width:900px){
+ nav.links{display:none}
+ .hero .grid,.hist-grid,.chegar{grid-template-columns:1fr}
+ .days,.quotes{grid-template-columns:1fr}
+ .day-col{border-right:0;border-bottom:1px solid var(--madeira)}
+ .day-col:last-child{border-bottom:0}
+ .cach{grid-template-columns:1fr}
+ .cach .photo-frame{height:260px}
+ .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}
+ .mosaic figure:first-child{grid-row:auto;grid-column:span 2}
+ .sec-title h2{white-space:normal}
+ .sec-title{flex-direction:column;align-items:flex-start;gap:.2rem}
+ .sec-title::after{display:none}
+ .sec-title .num{white-space:nowrap}
+ .top .btn{padding:.6rem .8rem;font-size:.85rem}
+ .top .btn span{display:none}
+}
+@media (max-width:420px){.brand b{font-size:1.15rem}.seal{width:44px;height:44px;font-size:.6rem}.hero .left .photo-frame{height:220px}}
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.sec-title,.day-col,.info-strip,.hist-grid>div:first-child,.timeline li,blockquote.gilmar,.cach>*,.mosaic figure,.fora-txt,.score,.quotes figure,.chegar>div:first-child>*,.chegar>.photo-frame){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.sec-title,.day-col,.info-strip,.hist-grid>div:first-child,.timeline li,blockquote.gilmar,.cach>*,.mosaic figure,.fora-txt,.score,.quotes figure,.chegar>div:first-child>*,.chegar>.photo-frame):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:12px}
+/* menu e selo */
+nav.links a{transition:border-color .25s,color .2s}
+nav.links a.on{border-color:var(--cobre)}
+.seal{animation:selo .8s cubic-bezier(.3,1.4,.5,1) .1s both;transition:rotate .5s var(--e)}
+@keyframes selo{from{opacity:0;rotate:-90deg;scale:.6}}
+.brand:hover .seal{rotate:10deg}
+/* hero: texto sobe, o carimbo "bate" e o calendário do café colonial encaixa */
+.hero .left>*{animation:sobe .8s var(--e) both}
+.hero .left>:nth-child(2){animation-delay:.1s}.hero .left>:nth-child(3){animation-delay:.2s}.hero .left>:nth-child(4){animation-delay:.3s}.hero .left>:nth-child(5){animation-delay:.42s}
+.stamp{animation:carimba .5s cubic-bezier(.3,1.4,.5,1) 1.1s both}
+@keyframes carimba{from{opacity:0;scale:2}}
+.cal{animation:folha .9s var(--e) .3s both}
+@keyframes folha{from{opacity:0;translate:0 26px;rotate:1.5deg}}
+.cal .day{animation:dia .7s var(--e) .9s both}
+@keyframes dia{from{opacity:0;translate:0 -18px}}
+/* molduras de foto: sombra cresce no hover */
+.photo-frame{transition:transform .3s var(--e),box-shadow .3s}
+.photo-frame:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 rgba(59,42,30,.25)}
+/* títulos: o filete duplo cresce até a borda */
+.sec-title::after{transform-origin:0 50%;transition:scale 1.1s var(--e) calc(var(--d,0ms) + .25s)}
+.anim .sec-title:not(.in)::after{scale:0 1}
+.anim .day-col{--ty:26px}
+.day-col{transition:background-color .25s}
+.day-col:hover{background-color:#FBF6EA}
+/* linha do tempo: os marcos "pingam" um a um */
+.timeline li::before{transition:scale .5s cubic-bezier(.3,1.6,.5,1) calc(var(--d,0ms) + .2s)}
+.anim .timeline li:not(.in)::before{scale:0}
+.anim .timeline li{--ty:16px}
+.anim .cach>*{--sc:.97}
+.mosaic figure img{transition:scale 1.2s var(--e)}
+.mosaic figure:hover img{scale:1.06}
+.anim .mosaic figure{--sc:.96;--ty:0px}
+/* avaliações */
+.score b{font-variant-numeric:tabular-nums}
+.quotes figure::before{transition:translate .5s cubic-bezier(.3,1.5,.5,1) calc(var(--d,0ms) + .35s),opacity .3s calc(var(--d,0ms) + .35s)}
+.anim .quotes figure:not(.in)::before{translate:0 -16px;opacity:0}
+.quotes figure:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--madeira)}
+/* botão do WhatsApp com anel pulsando */
+.fab::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--zap);animation:anel 2.6s ease-out infinite;pointer-events:none}
+@keyframes anel{from{scale:1;opacity:.8}to{scale:1.6;opacity:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<div class="demo" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="#">
+   <div class="seal">DESDE<br>1918</div>
+   <div><b>Engenho do Nono</b><small>Alto Gasparinho · Gaspar/SC</small></div>
+  </a>
+  <nav class="links"><a href="#dias">Os dias</a><a href="#historia">História</a><a href="#cachacaria">Cachaçaria</a><a href="#chegar">Como chegar</a></nav>
+  <a class="btn" href="https://wa.me/5547988281596?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Engenho%20do%20Nono." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg><span>Reservar</span></a>
+ </div>
+</header>
+
+<main>
+<section class="hero" style="padding-top:2.6rem">
+ <div class="wrap grid">
+  <div class="left">
+   <p class="kicker">Tradição de família, 4ª geração</p>
+   <h1>Comida da nona,<br><em>cachaça do nono.</em></h1>
+   <p class="lead">Restaurante campestre e engenho movido a roda d'água no Alto Gasparinho, na Rota Villa D'Itália. Almoço à la carte no sábado, almoço da nona no fogão a lenha no domingo e café colonial em sábados marcados.</p>
+   <div class="btns">
+    <a class="btn" href="https://wa.me/5547988281596?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Engenho%20do%20Nono." target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+    <a class="btn alt" href="#dias">O que tem em cada dia</a>
+   </div>
+   <div class="photo-frame"><img src="assets/fachada-restaurante-placa.jpg" alt="Fachada de madeira do Restaurante Engenho do Nono com jardim e caminho de pedra"><span class="stamp">Reserva necessária</span></div>
+  </div>
+  <aside class="cal" aria-labelledby="cal-t">
+   <h2 id="cal-t">Próximo café colonial</h2>
+   <div class="next">
+    <div class="wd" id="calWd">sábado</div>
+    <div class="day" id="calDay">--</div>
+    <div class="mon" id="calMon">mês</div>
+   </div>
+   <ul id="calList" aria-label="Próximas datas"></ul>
+   <ol class="steps"><li>Escolha o sábado</li><li>Chame no WhatsApp</li><li>Espere a confirmação da reserva</li></ol>
+   <p class="note"><strong>Datas calculadas pela regra divulgada no Google (1º e 3º sábado do mês).</strong> Confirme a data e o horário pelo WhatsApp antes de subir a serra.</p>
+   <a class="btn" id="calBtn" href="https://wa.me/5547988281596" target="_blank" rel="noopener">Reservar esse sábado</a>
+  </aside>
+ </div>
+</section>
+
+<hr class="rule">
+
+<section id="dias">
+ <div class="wrap">
+  <div class="sec-title"><span class="num">nº 1</span><h2>O que tem em cada dia</h2></div>
+  <div class="days">
+   <article class="day-col">
+    <img src="assets/file-tabua-salada.jpg" alt="Filé servido na tábua com batatas e salada">
+    <span class="tag">Sábado</span>
+    <h3>Almoço à la carte</h3>
+    <p class="hora">13h às 17h30</p>
+    <p>Com destaque para o <strong>filé duplo</strong> e o <strong>entrecôte</strong>, servidos com acompanhamentos.</p>
+   </article>
+   <article class="day-col">
+    <img src="assets/buffet-panelas-barro.jpg" alt="Panelas de barro com comida caseira no buffet">
+    <span class="tag">Domingo</span>
+    <h3>Almoço da nona</h3>
+    <p class="hora">11h30 às 14h</p>
+    <p>Receitas tradicionais da nona, feitas pela família e servidas no <strong>fogão a lenha</strong>.</p>
+   </article>
+   <article class="day-col">
+    <img src="assets/cafe-colonial-cucas-tachos.jpg" alt="Mesa de café colonial com cucas e tachos">
+    <span class="tag">1º e 3º sábado*</span>
+    <h3>Café colonial</h3>
+    <p class="hora">Data e horário pelo WhatsApp</p>
+    <p>Grande variedade de pães, bolos e doces artesanais. A ND+ fala em mais de 60 opções entre doces e salgados.</p>
+   </article>
+  </div>
+  <div class="info-strip"><span>Segunda a sexta: fechado</span><span>Valores pelo WhatsApp</span><span>Bebidas à parte no café colonial</span><span>*Confirme o sábado do café colonial antes de ir</span></div>
+ </div>
+</section>
+
+<section id="historia" class="hist">
+ <div class="wrap">
+  <div class="sec-title"><span class="num" style="color:#E9B48F">nº 2</span><h2>Uma roda que não para desde 1940</h2></div>
+  <div class="hist-grid">
+   <div>
+    <div class="photo-frame" style="height:420px"><img src="assets/roda-dagua.jpg" alt="Roda d'água de madeira do engenho em funcionamento"></div>
+    <div class="photo-frame" style="height:200px;margin-top:1rem"><img src="assets/painel-historia-1918.jpg" alt="Quadro com a história do engenho desde 1918, na parede do restaurante" style="object-position:center 40%"></div>
+   </div>
+   <div>
+    <ol class="timeline">
+     <li><div class="yr">1918</div><p>O imigrante italiano Ulberto Marquetti começa a fazer cachaça no engenho, com moenda de tração animal.</p></li>
+     <li><div class="yr">1940</div><p>A moagem passa a ser movida por roda d'água. Até hoje, sem energia elétrica na moenda.</p></li>
+     <li><div class="yr">Anos 2000</div><p>Sai a terceira roda da história, feita de itaúba.</p></li>
+     <li><div class="yr">2010</div><p>Chegam os licores de vários sabores e a batida de limão.</p></li>
+     <li><div class="yr">Hoje</div><p>Os irmãos Gilmar e Vandeir Cezar, com Jéssica e Angela, são a 4ª geração. A comida continua sendo feita pela família.</p></li>
+    </ol>
+    <blockquote class="gilmar">“Tenho comigo que, enquanto essa roda girar, a história da nossa família não vai morrer.”<cite>Gilmar Cezar, ao Jornal Metas (26/03/2026)</cite></blockquote>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="cachacaria">
+ <div class="wrap">
+  <div class="sec-title"><span class="num">nº 3</span><h2>Cachaçaria do engenho</h2></div>
+  <div class="cach">
+   <div class="photo-frame"><img src="assets/garrafas-cachaca-rotulo.jpg" alt="Garrafas de cachaça com o rótulo Engenho do Nono"></div>
+   <div class="label-card">
+    <span class="small">Produção própria</span>
+    <h3>Do alambique para a mesa</h3>
+    <ul><li>Cachaça</li><li>Licores</li><li>Batida de limão</li><li>Melado</li></ul>
+    <p>Loja junto ao restaurante. Dá para ver a roda e o engenho de perto (visita ao processo com agendamento).</p>
+   </div>
+   <div class="photo-frame"><img src="assets/prateleira-cachacas.jpg" alt="Prateleira iluminada com garrafas de cachaça e licores"></div>
+  </div>
+ </div>
+</section>
+
+<hr class="rule">
+
+<section id="fora">
+ <div class="wrap">
+  <div class="sec-title"><span class="num">nº 4</span><h2>Lá fora, para as crianças</h2></div>
+  <div class="mosaic">
+   <figure><img src="assets/balanco-no-morro.jpg" alt="Balanço de madeira no alto do morro com vista para o vale"><figcaption>Balanço no alto do morro</figcaption></figure>
+   <figure><img src="assets/riacho.jpg" alt="Riacho raso com pedras e mata"><figcaption>Riacho</figcaption></figure>
+   <figure><img src="assets/parquinho-escorregador.jpg" alt="Parquinho de madeira com escorregador no gramado"><figcaption>Parquinho</figcaption></figure>
+   <figure><img src="assets/portal-entrada.jpg" alt="Portal de madeira na entrada, com hortênsias"><figcaption>Entrada</figcaption></figure>
+   <figure><img src="assets/por-do-sol-vale.jpg" alt="Pôr do sol sobre o vale"><figcaption>Fim de tarde</figcaption></figure>
+  </div>
+  <p class="fora-txt">Os clientes lembram do riacho onde as crianças brincam, do balanço com vista, da gangorra, dos coelhos e do bode, e dos objetos antigos expostos no salão de madeira.</p>
+ </div>
+</section>
+
+<section class="rev">
+ <div class="wrap">
+  <div class="score"><b>4,9 ★</b><span>1.367 avaliações no Google</span></div>
+  <div class="quotes">
+   <figure><blockquote>Comida maravilhosa e bem servida, atendimento de qualidade, nós piscavamos e mesa já estava limpa, lugar para levar a família toda</blockquote><figcaption>Milene Soares · Google · 04/07/2026</figcaption></figure>
+   <figure><blockquote>Memórias da minha infância ao ver algumas exposições que eles tem (...) O engenho é um charme a mais. Sem esquecer do espaço para as crianças</blockquote><figcaption>Ana Paula Ghilardi · Google · 19/04/2026</figcaption></figure>
+   <figure><blockquote>café colonial com muita comida e café a vontade. Diversos bolos, tortas salgadas, pão (...) Rio para as crianças brincarem tranquilamente, balanço, coelhos, bode</blockquote><figcaption>Cris Grun · Google · 21/02/2026</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="chegar">
+ <div class="wrap chegar">
+  <div>
+   <div class="sec-title"><span class="num">nº 5</span><h2>Como chegar</h2></div>
+   <p style="font-size:1.1rem"><strong>Rua Carlos Coradini, 1851 · Alto Gasparinho · Gaspar/SC</strong></p>
+   <div class="warn"><strong>Antes de sair:</strong> depois da igreja do Alto Gasparinho o asfalto acaba e a estrada é de chão. Em alguns trechos não tem sinal de celular: baixe o mapa off-line antes.</div>
+   <ul class="contacts">
+    <li><b>WhatsApp</b> (47) 98828-1596</li>
+    <li><b>Telefone</b> (47) 2102-0904</li>
+    <li><b>E-mail</b> engenhonono@yahoo.com.br</li>
+    <li><b>Instagram</b> @engenhodonono</li>
+   </ul>
+   <div class="btns">
+    <a class="btn" href="https://wa.me/5547988281596?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Engenho%20do%20Nono." target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+    <a class="btn alt" href="https://www.google.com/maps?cid=9065315717535852699" target="_blank" rel="noopener">Abrir no Google Maps</a>
+   </div>
+  </div>
+  <div class="photo-frame" style="height:440px"><img src="assets/vista-estacionamento.jpg" alt="Vista do alto da chegada ao Engenho, com o portal de madeira e o estacionamento no meio da mata"></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p>Engenho do Nono · Rua Carlos Coradini, 1851, Alto Gasparinho, Gaspar/SC</p>
+  <p>Demonstração feita pela WolfStudio. Não é o site oficial do Engenho do Nono. Fotos públicas do Google Maps, do portal de turismo de Gaspar e da página do Facebook do Engenho, usadas só nesta demonstração.</p>
+ </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5547988281596?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Engenho%20do%20Nono." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg></a>
+
+<script>
+(function(){
+ const meses=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+ function nthSat(y,m,n){const d=new Date(y,m,1);const off=(6-d.getDay()+7)%7;return new Date(y,m,1+off+7*(n-1));}
+ const hoje=new Date();hoje.setHours(0,0,0,0);
+ let datas=[];let y=hoje.getFullYear(),m=hoje.getMonth();
+ while(datas.length<4){[1,3].forEach(n=>{const s=nthSat(y,m,n);if(s>=hoje)datas.push({d:s,n});});m++;if(m>11){m=0;y++;}}
+ datas=datas.slice(0,4);
+ const f=datas[0];
+ document.getElementById('calDay').textContent=String(f.d.getDate()).padStart(2,'0');
+ document.getElementById('calMon').textContent=meses[f.d.getMonth()]+' '+f.d.getFullYear();
+ document.getElementById('calWd').textContent=(f.n===1?'1º':'3º')+' sábado do mês';
+ const ul=document.getElementById('calList');
+ datas.slice(1).forEach(x=>{const li=document.createElement('li');li.innerHTML='<span>'+String(x.d.getDate()).padStart(2,'0')+'/'+String(x.d.getMonth()+1).padStart(2,'0')+'</span><span>'+(x.n===1?'1º':'3º')+' sábado</span>';ul.appendChild(li);});
+ const txt='Olá! Vai ter café colonial no sábado '+String(f.d.getDate()).padStart(2,'0')+'/'+String(f.d.getMonth()+1).padStart(2,'0')+'? Gostaria de reservar.';
+ document.getElementById('calBtn').href='https://wa.me/5547988281596?text='+encodeURIComponent(txt);
+})();
+</script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.sec-title,.day-col,.info-strip,.hist-grid>div:first-child,.timeline li,blockquote.gilmar,.cach>*,.mosaic figure,.fora-txt,.score,.quotes figure,.chegar>div:first-child>*,.chegar>.photo-frame', CNT='.score b';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
